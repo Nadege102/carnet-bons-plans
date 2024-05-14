@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste de cartes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        h1, h2 {
+            font-family: "Patrick Hand", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        
+        h2 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-style: italic;
+            color: #AAA;
+        }
+
+    </style>
+
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto py-8">
+    <div class="">
+        <h1 class=" text-center pt-4">Les bons plans</h1>
+        <h2 class="text-center">Le carnet de vie sociale</h2>
+        <h4 class=" text-center py-8">Un projet de SOFFT Liège</h4>
+    </div>
+    <!-- Champ de recherche -->
+    <input type="text" id="searchInput" placeholder="Rechercher..." class="w-full mb-4 px-4 py-2 border rounded-lg">
+
+    <!-- Filtre par catégorie -->
+    <select id="categoryFilter" class="w-full mb-4 px-4 py-2 border rounded-lg">
+        <option value="">Toutes les catégories</option>
+        <option value="logement">Logement</option>
+        <option value="habillement">Habillement</option>
+        <option value="loisirs">Loisirs</option>
+        <option value="budget">Budget</option>
+    </select>
+
+    <!-- Liste des cartes -->
+    <div id="cardList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Les cartes seront ajoutées dynamiquement ici -->
+    </div>
+</div>
+
+<script>
+    // Charger les données depuis le fichier JSON
+    Papa.parse('data.csv', {
+        download: true,
+        header: true,
+        complete: function(results) {
+            const data = results.data;
+            const cardList = document.getElementById('cardList');
+            const searchInput = document.getElementById('searchInput');
+            const categoryFilter = document.getElementById('categoryFilter');
+
+            // Fonction pour filtrer les cartes
+            const filterCards = () => {
+                const searchText = searchInput.value.toLowerCase();
+                const selectedCategory = categoryFilter.value.toLowerCase();
+
+                const filteredCards = data.filter(card => {
+                    const titleMatch = card.title.toLowerCase().includes(searchText);
+                    const categoryMatch = card.category.toLowerCase() === selectedCategory || selectedCategory === '';
+                    return titleMatch && categoryMatch;
+                });
+
+                // Afficher les cartes filtrées
+                displayCards(filteredCards);
+            };
+
+            // Fonction pour afficher les cartes
+            const displayCards = (cards) => {
+                cardList.innerHTML = '';
+                cards.forEach(card => {
+                    const location = card.location ? `<p class="text-gray-700 mb-2"><strong>Lieu:</strong> ${card.location}</p>` : "";
+                    const phone = card.phone ? `<p class="text-gray-700 mb-2"><strong>Téléphone:</strong> ${card.phone}</p>`: "";
+                    const cardElement = `
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <img src="${card.picture}" alt="${card.title}" class="w-full h-48 object-cover">
+                            <div class="flex-grow p-4">
+                                <h2 class="text-xl font-bold mb-2">${card.title}</h2>
+                                <p class="text-gray-700 mb-4">${card.description}</p>
+                                ${location}
+                                ${phone}
+                            </div>
+                            <div class="p-4">
+                                <a href="${card.externalLink}" target="_blank" class="text-blue-500 hover:underline">En savoir plus</a>
+                            </div>
+                        </div>
+                    `;
+                    cardList.innerHTML += cardElement;
+                });
+            };
+
+            // Écouter les événements de changement dans le champ de recherche et le filtre par catégorie
+            searchInput.addEventListener('input', filterCards);
+            categoryFilter.addEventListener('change', filterCards);
+
+            // Afficher toutes les cartes au chargement de la page
+            displayCards(data);
+        }
+    });
+</script>
+
+</body>
+</html>
