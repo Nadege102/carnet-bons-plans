@@ -71,10 +71,10 @@
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Les bons plans</a>
+                    <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-yellow-700 md:p-0 dark:text-white md:dark:text-yellow-400" aria-current="page">Les bons plans</a>
                 </li>
                 <li>
-                    <a href="/a-propos.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">A propos</a>
+                    <a href="/a-propos.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-700 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">A propos</a>
                 </li>
                 </ul>
             </div>
@@ -84,11 +84,11 @@
         <h4 class=" text-center py-8">Un projet réalisé par les participantes des filières de formations de SOFFT Liège</h4>
     </div>
     <!-- Champ de recherche -->
-    <div class="flex w-4/5 m-auto">
-        <input type="text" id="searchInput" placeholder="Rechercher..." class="w-3/4 mt-4 mb-4 mr-4 px-4 py-2 border rounded-lg">
+    <div class="flex flex-col w-4/5 m-auto md:flex-row">
+        <input type="text" id="searchInput" placeholder="Rechercher..." class="w-full md:w-3/4 mt-4 md:mb-4 mr-4 px-4 py-2 border rounded-lg">
 
         <!-- Filtre par catégorie -->
-        <select id="categoryFilter" class="w-1/4 mt-4 mb-4 px-4 py-2 border rounded-lg">
+        <select id="categoryFilter" class="w-full md:w-1/4 mt-4 mb-4 px-4 py-2 border rounded-lg">
             <option value="">Toutes les catégories</option>
             <option value="Alimentation">Alimentation</option>
             <option value="Budget">Budget</option>
@@ -102,7 +102,7 @@
     
 
     <!-- Liste des cartes -->
-    <div id="cardList" class="w-4/5 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+    <div id="cardList" class="w-4/5 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Les cartes seront ajoutées dynamiquement ici -->
     </div>
 </div>
@@ -141,7 +141,8 @@
                     const urls = card.externalLink?.split(';');
                     const location = card.location ? `<p class="text-gray-700 mb-2"><strong>Lieu:</strong> ${card.location}</p>` : "";
                     const phone = card.phone ? `<p class="text-gray-700 mb-2"><strong>Téléphone:</strong> ${card.phone}</p>`: "";
-                    const links = urls?.map(function(url) { return `<a href="${url}" target="_blank" class="text-blue-500 block hover:underline">${url}</a>` }).join('')
+                    const email = card.email ? `<p class="text-gray-700 mb-2"><strong>Email:</strong> ${card.email}</p>`: "";
+                    const links = urls?.map(function(url) { return `<a href="${url}" target="_blank" class="text-yellow-700 block hover:underline break-all">${url}</a>` }).join('')
                     const cardElement = `
                         <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                             <div class="rounded ring-2 ring-offset-4 px-2 m-4 bottom-px right-px self-end">${card.category}</div>
@@ -151,6 +152,7 @@
                                 <p class="text-gray-700 mb-4">${card.description}</p>
                                 ${location}
                                 ${phone}
+                                ${email}
                             </div>
                             <div class="p-4">
                                 ${links}
