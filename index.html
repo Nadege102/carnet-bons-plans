@@ -91,6 +91,7 @@
         <select id="categoryFilter" class="w-full md:w-1/4 mt-4 mb-4 px-4 py-2 border rounded-lg">
             <option value="">Toutes les catégories</option>
             <option value="Alimentation">Alimentation</option>
+            <option value="Autres thématiques">Autres thématiques</option>
             <option value="Budget">Budget</option>
             <option value="Enfants">Enfants</option>
             <option value="Logement">Logement</option>
@@ -109,7 +110,7 @@
 
 <script>
     // Charger les données depuis le fichier JSON
-    Papa.parse('data.csv', {
+    Papa.parse('data-new.csv', {
         download: true,
         header: true,
         complete: function(results) {
@@ -140,12 +141,12 @@
                     console.log(card);
                     const urls = card.externalLink?.split(';');
                     const location = card.location ? `<p class="text-gray-700 mb-2"><strong>Lieu:</strong> ${card.location}</p>` : "";
-                    const phone = card.phone ? `<p class="text-gray-700 mb-2"><strong>Téléphone:</strong> ${card.phone}</p>`: "";
-                    const email = card.email ? `<p class="text-gray-700 mb-2"><strong>Email:</strong> ${card.email}</p>`: "";
+                    const phone = card.phone ? `<p class="text-gray-700 mb-2"><strong>Téléphone:</strong> <a href="tel:${card.phone}" class="text-yellow-700 hover:underline break-all">${card.phone}</a></p>`: "";
+                    const email = card.email ? `<p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:${card.email}" class="text-yellow-700 hover:underline break-all">${card.email}</a></p>`: "";
                     const links = urls?.map(function(url) { return `<a href="${url}" target="_blank" class="text-yellow-700 block hover:underline break-all">${url}</a>` }).join('')
                     const cardElement = `
                         <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-                            <div class="rounded ring-2 ring-offset-4 px-2 m-4 bottom-px right-px self-end">${card.category}</div>
+                            <div class="rounded ring-2 ring-offset-4 ring-yellow-700 px-2 m-4 bottom-px right-px self-end">${card.category}</div>
                             <img src="${card.picture}" alt="${card.title}" class="w-full h-48 object-contain">
                             <div class="flex-grow p-4">
                                 <h2 class="text-xl font-bold mb-2">${card.title}</h2>
