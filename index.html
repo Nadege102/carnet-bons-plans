@@ -3,88 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste de cartes</title>
+    <title>Carnet de bons plans</title>
+    <!-- Dépendances externes : Scripts, polices, styles, etc... -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <style>
-        h1, h2 {
-            font-family: "Patrick Hand", cursive;
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        h1 {
-            font-size: 4rem;
-        }
-
-        
-        h2 {
-            font-size: 2rem;
-        }
-
-        h4 {
-            font-style: italic;
-            font-weight: 600;
-            color: #222;
-        }
-
-        .title-container {
-            position: relative;
-            height: fit-content;
-        }
-
-        .title-background {
-            background-image: url("pattern.jpg");
-            background-repeat: repeat;
-            background-size: 512px;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-            opacity: 0.3;
-        }
-
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Fin des dépendances -->
 
 </head>
 <body class="bg-gray-100">
 
 <div class="container mx-auto">
-  
+    <!-- Entête du site -->
     <div class="title-container">
         <div class="title-background"></div>
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://carnetbonsplans.netlify.app" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://sofft.be/wp-content/uploads/2021/05/Service-dOrientation-pour-Femmes-a-la-recherche-dune-Formation-ou-dun-Travail-1500-×-1500-px-1-150x150.png" class="h-12" alt="Sofft Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-yellow-700 md:p-0 dark:text-white md:dark:text-yellow-400" aria-current="page">Les bons plans</a>
-                </li>
-                <li>
-                    <a href="/a-propos.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-700 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">A propos</a>
-                </li>
-                </ul>
-            </div>
+                <!-- Modifier l'attribut HREF suivant avec l'url de votre version du site -->
+                <a href="https://carnetbonsplans.netlify.app" class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <!-- Modifier l'attribut SRC avec l'url de votre logo hébergé -->
+                    <img src="https://sofft.be/wp-content/uploads/2021/05/Service-dOrientation-pour-Femmes-a-la-recherche-dune-Formation-ou-dun-Travail-1500-×-1500-px-1-150x150.png" class="h-12" alt="Sofft Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                </a>
+                <!-- Navigation et menu -->
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/" class="block py-2 px-3 rounded bg-transparent text-teal-600 md:p-0 dark:text-white md:dark:text-blue-400" aria-current="page">Les bons plans</a>
+                    </li>
+                    <li>
+                        <a href="/a-propos.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-600 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">A propos</a>
+                    </li>
+                    </ul>
+                </div>
+                <!-- Fin de Navigation -->
             </div>
         </nav>
         <h1 class=" text-center pt-4">Le carnet de bons plans</h1>
         <h4 class=" text-center py-8">Un projet réalisé par les participantes des filières de formations de SOFFT Liège</h4>
     </div>
+    <!-- Fin de l'Entête -->
     <!-- Champ de recherche -->
-    <div class="flex flex-col w-4/5 m-auto md:flex-row">
+    <div class="flex flex-col w-full m-auto md:flex-row">
+        <!-- Recherche textuelle -->
         <input type="text" id="searchInput" placeholder="Rechercher..." class="w-full md:w-3/4 mt-4 md:mb-4 mr-4 px-4 py-2 border rounded-lg">
 
         <!-- Filtre par catégorie -->
@@ -100,17 +71,20 @@
             <option value="Transport">Transport</option>
         </select>
     </div>
+    <!-- Fin de la recherche / filtre -->
     
 
     <!-- Liste des cartes -->
-    <div id="cardList" class="w-4/5 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div id="cardList" class="w-full m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Les cartes seront ajoutées dynamiquement ici -->
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
 <script>
-    // Charger les données depuis le fichier JSON
-    Papa.parse('data-new.csv', {
+    // Charger les données depuis le fichier CSV
+    Papa.parse('data.csv', {
         download: true,
         header: true,
         complete: function(results) {
@@ -138,16 +112,16 @@
             const displayCards = (cards) => {
                 cardList.innerHTML = '';
                 cards.forEach(card => {
-                    console.log(card);
                     const urls = card.externalLink?.split(';');
+                    const cat = card.category.toLowerCase().replace(' ', '-').replace('é', 'e');
                     const location = card.location ? `<p class="text-gray-700 mb-2"><strong>Lieu:</strong> ${card.location}</p>` : "";
-                    const phone = card.phone ? `<p class="text-gray-700 mb-2"><strong>Téléphone:</strong> <a href="tel:${card.phone}" class="text-yellow-700 hover:underline break-all">${card.phone}</a></p>`: "";
-                    const email = card.email ? `<p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:${card.email}" class="text-yellow-700 hover:underline break-all">${card.email}</a></p>`: "";
-                    const links = urls?.map(function(url) { return `<a href="${url}" target="_blank" class="text-yellow-700 block hover:underline break-all">${url}</a>` }).join('')
+                    const phone = card.phone ? `<p class="text-gray-700 mb-2"><strong>Téléphone:</strong> <a href="tel:${card.phone}" class="text-teal-600 hover:underline break-all">${card.phone}</a></p>`: "";
+                    const email = card.email ? `<p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:${card.email}" class="text-teal-600 hover:underline break-all">${card.email}</a></p>`: "";
+                    const links = urls?.map(function(url) { return `<a href="${url}" target="_blank" class="text-teal-600 block hover:underline break-all">${url}</a>` }).join('')
                     const cardElement = `
                         <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-                            <div class="rounded ring-2 ring-offset-4 ring-yellow-700 px-2 m-4 bottom-px right-px self-end">${card.category}</div>
-                            <img src="${card.picture}" alt="${card.title}" class="w-full h-48 object-contain">
+                            <div class="rounded ring-${cat} px-2 m-4 bottom-px right-px self-end">${card.category}</div>
+                            <img src="${card.picture}" alt="${card.title}" class="w-full px-4 h-48 object-contain">
                             <div class="flex-grow p-4">
                                 <h2 class="text-xl font-bold mb-2">${card.title}</h2>
                                 <p class="text-gray-700 mb-4">${card.description}</p>
@@ -173,6 +147,7 @@
         }
     });
 </script>
+
 
 </body>
 </html>
