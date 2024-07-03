@@ -56,10 +56,10 @@
     <!-- Champ de recherche -->
     <div class="flex flex-col w-full m-auto md:flex-row">
         <!-- Recherche textuelle -->
-        <input type="text" id="searchInput" placeholder="Rechercher..." class="w-full md:w-3/4 mt-4 md:mb-4 mr-4 px-4 py-2 border rounded-lg">
+        <input type="text" id="searchInput" placeholder="Rechercher..." class="md:w-3/4 sm:w-full mt-4 md:mb-4 mr-4 px-4 py-2 border rounded-lg">
 
         <!-- Filtre par catégorie -->
-        <select id="categoryFilter" class="w-full md:w-1/4 mt-4 mb-4 px-4 py-2 border rounded-lg">
+        <select id="categoryFilter" class="md:w-1/4 sm:w-full mt-4 mb-4 px-4 py-2 border rounded-lg">
             <option value="">Toutes les catégories</option>
             <option value="Alimentation">Alimentation</option>
             <option value="Autres thématiques">Autres thématiques</option>
@@ -100,8 +100,9 @@
 
                 const filteredCards = data.filter(card => {
                     const titleMatch = card.title.toLowerCase().includes(searchText);
+                    const descMatch = card.description.toLowerCase().includes(searchText);
                     const categoryMatch = card.category.toLowerCase() === selectedCategory || selectedCategory === '';
-                    return titleMatch && categoryMatch;
+                    return (titleMatch || descMatch) && categoryMatch;
                 });
 
                 // Afficher les cartes filtrées
