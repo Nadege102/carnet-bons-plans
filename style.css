@@ -72,11 +72,11 @@ h5 {
     --base-color: #8CFAE6;
 }
 
-.ring-transports {
+.ring-transport {
     --base-color: #F9C98A;
 }
 
-.ring-alimentation, .ring-autres-thematiques, .ring-budget, .ring-enfants, .ring-logement, .ring-loisirs, .ring-sante, .ring-transports {
+.ring-alimentation, .ring-autres-thematiques, .ring-budget, .ring-enfants, .ring-logement, .ring-loisirs, .ring-sante, .ring-transport {
     background-color: var(--base-color);
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
