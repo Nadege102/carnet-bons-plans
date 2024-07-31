@@ -108,16 +108,12 @@ Il conviendra également de remplacer les liens des logos et des URL vers nos re
 
 4. Sélectionnez le dépot "carnet-bons-plans" que vous aurez copié / "fork" au préalable
 
-5. Dans "Site name" vous devez choisir le nom du projet, c'est aussi ce qui sera dans l'URL de votre site, devant le .netlify.app 
-
-(notre exemple : carnetbonsplans.netlify.app)
-
-Si vous possédez un nom de domaine, il est possible de le connecter plus tard. 
+5. Dans "Site name" vous devez choisir le nom du projet, c'est aussi ce qui sera dans l'URL de votre site, devant le .netlify.app (notre exemple : carnetbonsplans.netlify.app). Si vous possédez un nom de domaine, il est possible de le connecter plus tard. 
 
 6. Les paramètres suivants doivent être encodés : 
 - Base Directory : /
 - Build Command : " " (Vider le champ, s'il ne l'est pas)
 - Publish directory : " " (Vider le champ, s'il ne l'est pas)
-- Functions directory : (ne pas toucher ce champ)
+- Functions directory : netlify/functions (ne pas toucher ce champ)
 
 7. Cliquez sur "Deploy leNomDeVotreSite", vous devriez recevoir un lien vers votre site fraichement déployé.
