@@ -27,21 +27,23 @@ h5 {
     color: #222;
 }
 
+
 .title-container {
     position: relative;
     height: fit-content;
 }
 
 .title-background {
-    /* background-image: url("pattern.jpg"); */
-    /* background-repeat: repeat; */
-    background-color: #1FCEDB;
+
     background-size: 512px;
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: -1;
-    /* opacity: 0.3; */
+}
+
+.title-background-color {
+    background-color: #03787c;
 }
 
 .ring-alimentation {
