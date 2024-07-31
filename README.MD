@@ -4,9 +4,9 @@
 
 Le carnet de bons plans est une initiative de [SOFFT Liège](https://sofft.be/), le service de formation pour les femmes à la recherche d'un emploi ou d'une formation. SOFFT fait partie du [CVFE, le collectif Contre les Violences Familiales et l'Exclusion](https://www.cvfe.be/).
 
-Ce site reprends tous les bons plans deniché par nos participantes, toutes filières de formation confondues, lors des ateliers "Vie Sociale".
+Ce site reprend tous les bons plans dénichés par nos participantes, toutes filières de formation confondues, lors des ateliers "Vie Sociale".
 
-Le carnet a été réfléchi dans le cadre du projet [SPINIC (Scénarios Pédagogiques Intégrateurs pour un Numérique Inclusif)](https://www.spinic.uliege.be/) mené par l'Université de Liège, le [LabSET](https://www.labset.uliege.be/cms/c_15785891/fr/labset). N'hésitez pas à vous rendre sur le site de SPINIC pour voir les différents projets et malettes pédagogiques déjà disponibles.
+Le carnet a été réfléchi dans le cadre du projet [SPINIC (Scénarios Pédagogiques Intégrateurs pour un Numérique Inclusif)](https://www.spinic.uliege.be/) mené par l'Université de Liège, le [LabSET](https://www.labset.uliege.be/cms/c_15785891/fr/labset). N'hésitez pas à vous rendre sur le site de SPINIC pour voir les différents projets et mallettes pédagogiques déjà disponibles.
 
 Vous souhaitez reproduire cette partie du projet avec vos participants ? Retrouvez toutes les informations nécessaires ci-dessous.
 
@@ -16,13 +16,13 @@ Le site attaché au carnet de bons plans se veut le plus simple possible, tout e
 
 ### Cloner le projet
 
-La première étape est de cloner/copier ce projet, ce repository (dépôt). Pour faire ceci, il existe plusieurs moyens, mais nous vous recommande vivement de continuer à utiliser un outil de versionning tel que Git et GitHub pour plein de raisons:
+La première étape est de cloner/copier ce projet, ce repository (dépôt). Pour faire ceci, il existe plusieurs moyens, mais nous vous recommandons vivement de continuer à utiliser un outil de versionning tel que Git et GitHub pour plein de raisons :
 
 - Retrouver ce qu'on avait fait précédemment en détails (historique de toutes les modifications)
 - Sauvegarde et redondance, sur GitHub, le code est beaucoup plus en sécurité qu'au fond d'un vieux serveur de stockage privé.
-- Praticité (disponible partout où internet est disponible aussi)
-- Partageabilité
-- C'est gratuit, et c'est pas négligeable (mais ça ne fait pas le café)
+- Praticité et portabilité (disponible partout où internet est disponible aussi)
+- Partageabilité du projet
+- C'est gratuit, et ce n'est pas négligeable (mais ça ne fait pas le café)
 
 Voici un tutoriel relativement complet et bien expliqué sur Git et ses comparses : 
 [https://blent.ai/blog/a/git-tutoriel-complet](https://blent.ai/blog/a/git-tutoriel-complet)
@@ -50,11 +50,13 @@ Vu la quantité raisonnable de données, nous avons opté pour une solution simp
 
 Les catégories sont hardcodées, ce qui signifie qu'elles sont écrites en dur dans le code. Pour les modifier, il va falloir modifier [les lignes suivantes](https://github.com/sofft-cvfe/carnet-bons-plans/blob/master/index.html#L63-L71)
 
+Les images, comme nos données, sont stockées dans le dépôt. La solution est loin d'être idéale et nous songeons actuellement a d'autres options.
+
 ### Personnalisation
 
 La structure de base des pages de ce site web ont été générées via ChatGPT 3.5, il a tout de même fallu faire des corrections, et savoir quoi demander exactement. Mais ce fût un gain de temps considérable. 
 
-Quand cela fût possible, nous nous sommes servis d'outils externes, déjà prêts, dans le but d'accélerer la sortie du projet, de le rendre le plus "léger" possible, et le plus reproductible également, ainsi que de rester en maîtrise des ressources disponibles.
+Quand cela fût possible, nous nous sommes servis d'outils externes, déjà prêts, dans le but d'accélérer la sortie du projet, de le rendre le plus "léger" possible, et le plus reproductible également, ainsi que de rester en maîtrise des ressources disponibles.
 
 Par exemple : 
 
@@ -97,3 +99,4 @@ Il conviendra également de remplacer les liens des logos et des URL vers nos re
 
 *Avec Github et Netlify*
 
+TODO
