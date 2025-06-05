@@ -28,6 +28,10 @@ h5 {
 	color: #222;
 }
 
+.mon-bouton {
+	border: 1px solid black;
+}
+
 #mon-image {
 	background-image: url(76216.png);
 	background-size: 100%;
