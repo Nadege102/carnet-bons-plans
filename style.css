@@ -1,86 +1,107 @@
-h1, h2 {
-    font-family: "Patrick Hand", cursive;
-    font-weight: 600;
-    font-style: normal;
+h1,
+h2 {
+	font-family: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+	font-weight: 600;
+	font-style: normal;
 }
 
 h1 {
-    font-size: 4rem;
-    color: white;
-    text-shadow: 2px 2px 2px black;
+	font-size: 4rem;
+	color: white;
+	text-shadow: 2px 2px 2px black;
 }
 
 
 h2 {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 h4 {
-    font-style: italic;
-    font-weight: 600;
-    color: #222;
+	font-style: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+	italic;
+	font-weight: 600;
+	color: #222;
 }
 
 h5 {
-    font-style: italic;
-    font-weight: 400;
-    color: #222;
+	font-style: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+	italic;
+	font-weight: 400;
+	color: #222;
 }
 
+#mon-image {
+	background-image: url(76216.png);
+	background-size: 100%;
+	background-position: center;
+	background-position: 30% 75%;
+	background-repeat: no-repeat;
+	width: 200px;
+}
 
 .title-container {
-    position: relative;
-    height: fit-content;
+	position: relative;
+	height: fit-content;
 }
 
 .title-background {
 
-    background-size: 512px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+	background-size: 512px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
 }
 
 .title-background-color {
-    background-color: #03787c;
+	/* background-color: #03787c; */
+	/* background: #EEAECA; */
+	background: linear-gradient(187deg, rgba(238, 174, 202, 0.18) 0%, rgba(148, 187, 233, 0.5) 100%);
+
 }
 
 .ring-alimentation {
-    --base-color: #CAFA89;
+	--base-color: #CAFA89;
 }
 
 .ring-autres-thematiques {
-    --base-color: #C18CFA;
+	--base-color: #C18CFA;
 }
 
 .ring-budget {
-    --base-color: #8CFAAE;
+	--base-color: #8CFAAE;
 }
 
 .ring-enfants {
-    --base-color: #FA8CF4;
+	--base-color: #FA8CF4;
 }
 
 .ring-logement {
-    --base-color: #AEFA8C;
+	--base-color: #AEFA8C;
 }
 
 .ring-loisirs {
-    --base-color: #8CD3FA;
+	--base-color: #8CD3FA;
 }
 
 .ring-sante {
-    --base-color: #8CFAE6;
+	--base-color: #8CFAE6;
 }
 
 .ring-transport {
-    --base-color: #F9C98A;
+	--base-color: #F9C98A;
 }
 
-.ring-alimentation, .ring-autres-thematiques, .ring-budget, .ring-enfants, .ring-logement, .ring-loisirs, .ring-sante, .ring-transport {
-    background-color: var(--base-color);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 5px;
+.ring-alimentation,
+.ring-autres-thematiques,
+.ring-budget,
+.ring-enfants,
+.ring-logement,
+.ring-loisirs,
+.ring-sante,
+.ring-transport {
+	background-color: var(--base-color);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 5px;
 }
