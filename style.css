@@ -78,7 +78,7 @@ h5 {
 }
 
 .ring-loisirs {
-	--base-color: #ec9af3;
+	--base-color: #ec9af3e1;
 }
 
 .ring-sante {
@@ -98,7 +98,7 @@ h5 {
 .ring-sante,
 .ring-transport {
 	background-color: var(--base-color);
-	border: 1px solid rgba(242, 237, 237, 0.904);
-	border-radius: 5px;
+	border: 5px solid rgba(242, 237, 237, 0.904);
+	border-radius: 80px;
 	padding: 5px;
 }
