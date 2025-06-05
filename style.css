@@ -28,7 +28,7 @@ h5 {
 	color: #222;
 }
 
- .mon-bouton {
+ .mon-bouton {flex-wrap;
       border: 1px solid rgba(216, 16, 136, 0.766);
       text-decoration: none;
       padding: 12px 24px; /* Ajouter un peu de padding */
