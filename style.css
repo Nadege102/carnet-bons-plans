@@ -99,6 +99,10 @@ h5 {
 .ring-transport {
 	background-color: var(--base-color);
 	border: 5px solid rgba(242, 237, 237, 0.904);
-	border-radius: 80px;
+	border-radius: 70px;
 	padding: 5px;
+}
+
+.arrondi {
+	border-radius: 30px ;
 }
