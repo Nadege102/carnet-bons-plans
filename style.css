@@ -53,9 +53,8 @@ h5 {
 
 .title-background-color {
 	/* background-color: #03787c; */
-	/* background: #EEAECA; */
-	background: linear-gradient(187deg, rgba(238, 174, 202, 0.18) 0%, rgba(148, 187, 233, 0.5) 100%);
-
+	/* background:#EEAECA; */
+	background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 .ring-alimentation {
