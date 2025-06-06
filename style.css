@@ -1,158 +1,180 @@
 h1,
 h2 {
-	font-family: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
-	font-weight: 600;
-	font-style: normal;
+  font-family: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+  font-weight: 600;
+  font-style: normal;
 }
 
 h1 {
-	font-size: 4rem;
-	color: white;
-	text-shadow: 2px 2px 2px black;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 
 h2 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 h4 {
-	font-style: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
-	font-weight: 600;
-	color: #e8e0e0;
+  font-style: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+  font-weight: 600;
+  color: #e8e0e0;
 }
 
 h5 {
-	font-style: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
-	font-weight: 400;
-	color: #222;
+  font-style: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+  font-weight: 400;
+  color: #222;
 }
 
- .mon-bouton {flex-wrap;
-      border: 1px solid rgba(216, 16, 136, 0.766);
-      text-decoration: none;
-      padding: 0.3em 0.8em; /* Ajouter un peu de padding */
-      font-weight: 600;
-      border-radius: 24px; /* Coins arrondis */
-      /* color: white; */
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+.mon-bouton {
+  flex-wrap;
+  border: 1px solid rgba(216, 16, 136, 0.766);
+  text-decoration: none;
+  padding: 0.3em 0.8em;
+  /* Ajouter un peu de padding */
+  font-weight: 600;
+  border-radius: 24px;
+  /* Coins arrondis */
+  /* color: white; */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-    /* Bouton Alimentation */
-    .alimentation {
-      background-color: #D81088; /* Couleur spécifique */
-    }
-  
+/* Bouton Alimentation */
+.alimentation {
+  background-color: #D81088;
+  /* Couleur spécifique */
+}
 
-    .alimentation:hover {
-      background-color: #C20777; /* Couleur plus foncée */
-    }
 
-    /* Bouton Budget */
-    .budget {
-      background-color: #6A1B9A; /* Couleur spécifique */
+.alimentation:hover {
+  background-color: #C20777;
+  /* Couleur plus foncée */
+}
+
+/* Bouton Budget */
+.budget {
+  background-color: #8b1fd3;
+  /* Co
     }
 
     .budget:hover {
       background-color: #4A148C; /* Couleur plus foncée */
-    }
+}
 
-    /* Bouton Santé */
-    .sante {
-      background-color: #2196F3; /* Couleur spécifique */
-    }
+/* Bouton Santé */
+.sante {
+  background-color: #2196F3;
+  /* Couleur spécifique */
+}
 
-    .sante:hover {
-      background-color: #1976D2; /* Couleur plus foncée */
-    }
+.sante:hover {
+  background-color: #1976D2;
+  /* Couleur plus foncée */
+}
 
-    /* Bouton Enfants */
-    .enfants {
-      background-color: #F48FB1; /* Couleur spécifique */
-    }
+/* Bouton Enfants */
+.enfants {
+  background-color: #F48FB1;
+  /* Couleur spécifique */
+}
 
-    .enfants:hover {
-      background-color: #F06292; /* Couleur plus foncée */
-    }
+.enfants:hover {
+  background-color: #F06292;
+  /* Couleur plus foncée */
+}
 
-    /* Bouton Transport */
-    .transport {
-      background-color: #2196F3; /* Couleur spécifique */
-    }
+/* Bouton Transport */
+.transport {
+  background-color: #2196F3;
+  /* Couleur spécifique */
+}
 
-    .transport:hover {
-      background-color: #1976D2; /* Couleur plus foncée */
-    }
+.transport:hover {
+  background-color: #1976D2;
+  /* Couleur plus foncée */
+}
 
-    /* Bouton Autres */
-    .autres {
-      background-color: #9C27B0; /* Couleur spécifique */
-    }
+/* Bouton Autres */
+.autres {
+  background-color: #9C27B0;
+  /* Couleur spécifique */
+}
 
-    .autres:hover {
-      background-color: #8E24AA; /* Couleur plus foncée */
-    }
+.autres:hover {
+  background-color: #ba4fd7;
+  /* Couleur plus foncée */
+}
 
 
 #mon-image {
-	background-image: url(76216.png);
-	background-size: 100%;
-	background-position: center;
-	background-position: 30% 75%;
-	background-repeat: no-repeat;
-	width: 200px;
+  background-image: url(76216.png);
+  background-size: 100%;
+  background-position: center;
+  background-position: 30% 75%;
+  background-repeat: no-repeat;
+  width: 200px;
 }
 
 .title-container {
-	position: relative;
-	height: fit-content;
+  position: relative;
+  height: fit-content;
 }
 
 .title-background {
 
-	background-size: 512px;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
+  background-size: 512px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .title-background-color {
-	/* background-color: #03787c; */
-	/* background:#EEAECA; */
-	background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  /* background-color: #D81088; */
+  /* background:#EEAECA; */
+  background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
+
 
 .ring-alimentation {
-	--base-color:#EEAECA ;
-}
+      border: 10px solid #D81088;       /* Bordure rose */
+      color: #D81088;                   /* Texte rose */
+      padding: 0.3em 0.8em;
+      font-weight: 600;
+      border-radius: 24px;
+      background-color: #ffffff;        /* Fond blanc */
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
 
 .ring-autres-thematiques {
-	--base-color: #cdadee;
+  --base-color: #ffffff;
+  /* Couleur spécifique */
+  ;
+  color: #ba4fd7;
 }
 
 .ring-budget {
-	--base-color: #80ced0;
+  --base-color: #ffffff;
+  color: #4A148C;
 }
 
 .ring-enfants {
-	--base-color: #FA8CF4;
-}
-
-.ring-logement {
-	--base-color: #8cc5fa;
-}
-
-.ring-loisirs {
-	--base-color: #ec9af3e1;
+  --base-color: #ffffff;
+  color: #F48FB1;
 }
 
 .ring-sante {
-	--base-color: #8CFAE6;
+  --base-color: #ffffff;
+  color: #2196F3;
 }
 
 .ring-transport {
-	--base-color: #d775ab69;
+  --base-color: #ffffff;
+  color: #1976D2;
 }
 
 .ring-alimentation,
@@ -163,12 +185,13 @@ h5 {
 .ring-loisirs,
 .ring-sante,
 .ring-transport {
-	background-color: var(--base-color);
-	border: 5px solid rgba(242, 237, 237, 0.904);
-	border-radius: 70px;
-	padding: 5px;
+  background-color: var(--base-color);
+  border: 2px solid rgba(248, 1, 195, 0.904);
+  border-radius: 70px;
+  padding: 5px 10px;
 }
 
 .arrondi {
-	border-radius: 30px ;
+  border-radius: 30px;
+
 }
