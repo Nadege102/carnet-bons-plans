@@ -31,9 +31,9 @@ h5 {
  .mon-bouton {flex-wrap;
       border: 1px solid rgba(216, 16, 136, 0.766);
       text-decoration: none;
-      padding: 12px 24px; /* Ajouter un peu de padding */
+      padding: 0.3em 0.8em; /* Ajouter un peu de padding */
       font-weight: 600;
-      border-radius: 8px; /* Coins arrondis */
+      border-radius: 24px; /* Coins arrondis */
       /* color: white; */
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
@@ -42,6 +42,7 @@ h5 {
     .alimentation {
       background-color: #D81088; /* Couleur spécifique */
     }
+  
 
     .alimentation:hover {
       background-color: #C20777; /* Couleur plus foncée */
